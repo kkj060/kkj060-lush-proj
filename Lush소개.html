@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>러쉬 소개 > 프레쉬 핸드메이드 코스메틱 러쉬</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0px solid rgba(0, 0, 0, 0.726);
+        }
+
+        .banner {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .int {
+            height: 950px;
+            position: relative;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            /* 브라우저 창에서 고정 된 위치에 놓는다 */
+            position: fixed;
+            top: 20px;
+            padding-bottom: 30px;
+            justify-content: center;
+            border-bottom: 0.1px solid rgba(0, 0, 0, 0.726);
+
+            width: 100%;
+        }
+
+        .navigation>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo>a {
+            color: rgba(0, 0, 0, 0.692);
+            font-size: 35px;
+            font-weight: bolder;
+            text-decoration: none;
+
+            padding-left: 6px;
+            padding-right: 40px;
+            padding-top: 15px;
+            padding-bottom: 5px;
+        }
+
+        .menu>a {
+            text-decoration: none;
+            color: #000000ab;
+            font-size: 15px;
+            font-weight: bold;
+
+            margin-left: 30px;
+        }
+
+        .menu > a:hover{
+            text-decoration: none;
+            color: #000000de;
+            font-size: 15px;
+            font-weight: bolder;
+
+            margin-left: 30px;
+        }
+
+        .quick{
+            flex-direction: column;
+            position: fixed;
+            right: 10px;
+            top: 300px;
+
+            background-color: transparent;
+
+        }
+
+        .quick > div{
+            width: 70px;
+            height: 70px; 
+        
+        }
+
+        .quick > div > a > img{
+            width: 50px;
+            height: 50px;
+
+            border-radius: 70px;
+        }
+
+        .introduce {
+            position: absolute;
+            left: 15%;
+            bottom: 20%;
+        }
+
+        .introduce>div {
+            padding: 15px;
+            color: rgba(0, 110, 96, 0.87);
+        }
+
+        .introduce>div:nth-child(2) {
+            padding-left: 30px;
+        }
+
+        .introduce>div:nth-child(3) {
+            padding-left: 30px;
+        }
+
+        .tell {
+            background-color: rgb(255, 255, 255);
+            height: 3500px;
+            width: 100%;
+        }
+
+        .j>div {
+            font-weight: bolder;
+            font-size: 55px;
+        }
+
+        .body {
+            top: 0;
+        }
+
+        .A {
+            margin-top: 10%;
+            margin-left: 30%;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+
+        .B{
+            margin-left: 31%;
+            font-weight: bolder;
+            font-size: 15px;
+        }
+
+        .C {
+            font-weight: bolder;
+            font-size: 30px;
+        }
+
+        .D{
+            margin-top: 10px;
+        }
+
+        body {
+            background-image: url("https://i.ytimg.com/vi/LsmZEPmQChY/maxresdefault.jpg");
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .img1{
+            display: flex;
+            padding-left: 18%;
+            margin-top: 10%;
+        }
+
+        .img2{
+            padding-left: 8%;
+            margin-top: 10%;
+        }
+
+
+        .footer{
+            background-color: black;
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 70px;
+            padding-right: 70px;
+
+            display: flex;
+            justify-content: space-around;
+
+            color: rgb(255, 255, 255);
+            font-size: small;
+        }
+
+        .call:hover{
+            border-bottom: rgb(255, 255, 255) solid 1px;
+            cursor: pointer;
+        }
+
+        .ad{
+            color: rgba(255, 255, 255, 0.486);
+        }
+
+        .my{
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .my>div{
+            cursor: pointer;
+        }
+
+        .my>div>a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .store{
+            position: relative;
+        }
+
+        .store:hover .qr-code{
+            visibility: visible;
+        }
+
+        .qr-code{
+            width: 100px;
+            height: 200px;
+            background-color: white;
+            position: absolute;
+            left: -280%;
+            top: -190%;
+            visibility: hidden;
+            padding-left: 30px;
+            padding-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- 상단에 고정 -->
+    <div class="banner">
+        <img src="https://i.ytimg.com/vi/LsmZEPmQChY/maxresdefault.jpg" alt="" width="100%">
+    </div>
+
+    <div class="container">
+        <!-- 투명한 div 영역 (height 부여) -->
+        <div class="int">
+            <div class="introduce">
+                <div>
+                    <h4>러쉬 소개</h4>
+                </div>
+                <div class="j">
+                    <div>프레쉬 핸드메이드</div>
+                    <div>코스메틱 브랜드</div>
+                </div>
+                <div>
+                    <h3>우리의 글로벌 기부 생태계는 적절하고 급진적이며 광범위 합니다.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="tell" style="background-color: white;">
+
+            <div class="body">
+                <div class="A">
+                    <div><br><br><br><br>“ 러쉬는 자연에서 얻은 신선한 재료와</div>
+                    <div>동물실험을 하지 않는 정직한 재료를 사용하여</div>
+                    <div>모든 제품을 손으로 만듭니다. ”</div>
+                </div>
+
+                <div class="B">
+                    <a>더불어 공장 거래, 인권 보호, 포장 최소화 등 다양한 캠페인 활동을 통해 기업 윤리와 신념을 알리고 있습니다.
+                    </a>
+                </div>
+            </div>
+
+            <div class="img1">
+                <img src="./resources/images/lush 1.png" alt="">
+                
+                <div class="img2">
+                    <div class="C">
+                        <div>러쉬는 어떤 이유에서도</div>
+                        <div>제품을 동물실험 하지 않고,</div>
+                        <div>동물실험을 거친 원재료조차</div>
+                        <div>사용하지 않습니다.</div>
+                    </div>
+
+                    <div class="D">
+                        <div>직접 구매팀을 운영하며, 엄격한 기준을 바탕으로</div>
+                        <div>윤리적인 공정 여부를 확인합니다.</div>
+                        <div>믿을 수 있는 생산자로부터 직거래를 원칙으로 합니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="img1">
+                <img src="./resources/images/lush 2.png" alt="">
+                
+                <div class="img2">
+                    <div class="C">
+                        <div>러쉬는 배쓰 밤, 샤워 젤리,</div>
+                        <div>고체 샴푸와 같은</div>
+                        <div>기발하고 혁신적인</div>
+                        <div>제품을 선보입니다.</div>
+                    </div>
+
+                    <div class="D">
+                        <div>특히 불필요한 포장을 없앤 고체 형태의 다양한 '네이키드</div>
+                        <div>(Naked)'제품을 개발하며 화장품 산업에서 혁명을</div>
+                        <div>일으켜 왔습니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="img1">
+                <img src="./resources/images/lush 3.png" alt="">
+                
+                <div class="img2">
+                    <div class="C">
+                        <div>신선함은 러쉬 철학의</div>
+                        <div>핵심입니다.</div>
+                    </div>
+
+                    <div class="D">
+                        <div>신선한 과일, 채소, 에센셜 오일, 최소한의 보존제와</div>
+                        <div>안전한 인공 성분을 사용하여 제품을 선보입니다.</div>
+                        <div>러쉬의 모든 제품은 베지테리언(Vegetarian)이며,</div>
+                        <div>그 중 약 90%는 식물성 원료로만 만든 비건(Vegan)입니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img1">
+                <img src="./resources/images/lush 4.png" alt="">
+                
+                <div class="img2">
+                    <div class="C">
+                        <div>이 모든 것은</div>
+                        <div>‘고객은 항상 옳다’는 믿음과</div>
+                        <div>러쉬의 핵심 가치인</div>
+                        <div>직원들의 진심이 모여 얻은</div>
+                        <div>결실입니다.</div>
+                    </div>
+
+                    <div class="D">
+                        <div>앞으로도 러쉬는 현시대에 필요한 제품과 서비스를</div>
+                        <div>제공할 것입니다.</div>
+                        <div>환경 보호를 위해 고민하고, 동물과 자연 그리고 사람이</div>
+                        <div>조화로운 세상을 만들기 위한 도전과 혁신에 앞장섭니다.</div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+    <div class="navigation">
+        <div>
+            <div class="logo">
+                <a href="./index.html">Lush</a>
+            </div>
+
+            <div class="menu">
+                <a href="./Lush소개.html">러쉬소개</a>
+                <a href="./spa.html">스파</a>
+                <a href="./매장.html">매장안내</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick"><!-- 퀵메뉴 -->
+        <div>
+            <a  href="https://pf.kakao.com/_VEbUM/chat?uuid=%40njm0mjywmsvfqiu" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt=""></a>
+        </div>
+        <div class="store">
+            <a href="">
+            <img src="./resources/images/index/shop.webp" alt=""></a>
+            <div class="qr-code">
+                
+                <img src="./resources/images/store.png" alt="">
+            </div>
+        </div>
+        <div>
+            <a href="">
+            <img src="https://cdn.icon-icons.com/icons2/3860/PNG/512/top_arrow_icon_238720.png" alt=""></a>
+        </div>
+    </div><!-- 퀵메뉴 -->
+
+    <div class="footer"><!--footer-->
+        <div>러쉬 앱 다운받기 <br><br>
+            <a href="https://apps.apple.com/kr/app/%EB%9F%AC%EC%89%AC/id6450295213" target="_blank">
+                <img src="./resources/images/스크린샷 2024-06-07 113659.png" alt="">
+            </a>
+
+            <br>
+
+            <a href="https://play.google.com/store/apps/details?id=kr.co.lush.lushapp&pli=1" target="_blank">
+                <img src="./resources/images/구글.png" alt="">
+            </a>
+            <a href="./resources/images/구글.png"></a>
+        </div>
+
+        <div><!--고객센터-->
+            <h2>고객센터</h2>
+            <a class="call">1644-2357</a>
+            <br>
+            <div>상담전화 13:00 ~ 16:00(평일)
+                <br>webmaster@lush.co.kr
+            </div>
+            <br>
+            <div>
+                상담톡 10:00 ~16:00(평일) <br>
+                상담톡시작하기 
+            </div>
+        </div>
+        <div><!--고객센터-->
+            <h2>기업선물</h2>
+                <a class="call">070-4713-8543</a>
+                <div>order@lush.co.kr</div>
+        </div>
+        <div><!--주소-->
+            <div class="ad">서울 강남구 학동로 336 (메이트리 빌딩(matree B/D)) 1층 주식회사 러쉬코리아
+                <br>사이트 운영자 : 주식회사 러쉬코리아 I 대표이사 : 우미령
+                <br>사업자 등록번호 : 201-81-77964 사업자정보확인
+                <br>통신판매업 신고번호 : 2012-서울서초-0647 I 개인정보보호책임자 : 장승웅
+                <br>
+                <br>COPYRIGHT © LUSHKOREA.CO.LTD.ALL RIGHTS RESERVED.
+                <br>
+                <br>
+                <a href="https://www.youtube.com/user/LUSHKOREA1?app=desktop" target="_blank">
+                    <img src="./resources/images/asdf.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="my"><!--개인정보-->
+            <div><a href="https://weare.lush.co.kr/policy_L2401.html" style="color: yellow;" target="_blank">개인정보처리방침</a></div>
+            <div><a href="https://weare.lush.co.kr/policy_video_v2.html" target="_blank">영상정보관리지침</a></div>
+            <div><a href="https://weare.lush.co.kr/useinfo_v5.html" target="_blank">이용약관</a></div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

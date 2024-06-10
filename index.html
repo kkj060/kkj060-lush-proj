@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=i, initial-scale=1.0">
+    <title>홈화면</title>
+
+    <style>
+        *{
+            border: 0px solid lightgrey;
+        }
+
+        .outline{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding-top: 30px;
+        }
+
+        .blank{
+            width: 100%;
+            background-color: black;
+            height: 30%;
+        }
+
+        .navigation{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+            position: fixed;
+            top: 0px;
+            background-color: white;
+            
+            z-index: 99;
+
+            
+        }
+
+
+        .navigation > div{
+
+            align-content: center;
+
+            font-size: 15px;
+        }
+
+        .navigation > div >a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+        .quick{
+            flex-direction: column;
+            position: fixed;
+            right: 10px;
+            top: 300px;
+
+            background-color: transparent;
+
+            z-index: 99;
+
+        }
+
+        .quick > div{
+            width: 70px;
+            height: 70px; 
+        
+        }
+
+        .quick > div > a > img{
+            width: 50px;
+            height: 50px;
+
+            border-radius: 70px;
+        }
+
+        .quick > div > a > img{
+            width: 50px;
+            height: 50px;
+
+            border-radius: 70px;
+        }
+
+        .store{
+            position: relative;
+        }
+
+        .store:hover .qr-code{
+            visibility: visible;
+        }
+
+        .qr-code{
+            width: 100px;
+            height: 200px;
+            background-color: white;
+            position: absolute;
+            left: -280%;
+            top: -190%;
+            visibility: hidden;
+            padding-left: 30px;
+            padding-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+
+        .banner{
+            width: 100%;
+            height: 500px;
+            background-image: url(./resources/images/index/bn_bg.jpg);
+
+            position: relative;
+        }
+
+        .bn_text{
+            font-size: 35px;
+            color: white;
+            font-weight: bolder;
+
+            position: absolute;
+            left: 20%;
+            bottom: 40%;
+        }
+
+        .bn_install{
+            display: flex;
+            font-size: 50px;
+
+            position: absolute;
+            left: 20%;
+            bottom: 15%;
+        }
+
+        .banner > div >img{
+            width: 150px;
+            height: 40px;
+        }
+
+        .content{
+            align-items: center;
+
+        }
+
+        .service{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding-top: 80px;
+        }
+
+
+        .preview_item{
+            display: flex;
+            padding-top: 20px;
+
+        }
+
+        .preview_item >div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        
+        .preview_item > div >img{
+            width: 160px;
+        
+        }
+
+        .title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .item_text{
+            font-size: 13px;
+            justify-content: center;
+        }
+
+        
+
+        .survey{
+            padding-top: 150px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            position: relative;
+        }
+
+
+        .survey_text{
+            font-size: 18px;
+            color: black;
+            font-weight:bolder;
+
+            position: absolute;
+            left: 15%;
+            bottom: 15%;
+        }
+
+        .survey_button{
+            border: white solid 2px;
+            width: 220px;
+            height: 50px;
+
+            text-align: center;
+            align-content: center;
+        }
+
+        .survey_button > a{
+            text-decoration: none;
+            color: white;
+            justify-content: center;
+            
+        }
+
+        .survey_button:hover{
+            background-color: white;
+        }
+
+        .survey_button:hover >a{
+            color: black;
+        }
+
+        .footer{
+            display: flex;
+
+            width: 100%;
+            height: 100px;
+
+            font-size: 10px;
+        }
+
+        .vlaue{
+            padding-top: 80px;
+            padding-bottom: 80px;
+            align-items: center;
+
+            background-color: transparent;
+        }
+
+        .value_box{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            height: 150px;
+
+            background-color: black;
+        }
+
+        .ROUND{
+
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+
+            text-align: center;
+            align-content: center;
+
+            font-size: 11px;
+        }
+
+        .ROUND:hover{
+            background-color: chocolate;
+        }
+            
+
+        .ROUND > a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer{
+            background-color: black;
+            
+            padding-top: 40px;
+            padding-bottom: 80px;
+            padding-left: 70px;
+            padding-right: 70px;
+
+            display: flex;
+            justify-content: space-around;
+
+            color: rgb(255, 255, 255);
+            font-size: small;
+        }
+
+        .call:hover{
+            border-bottom: rgb(255, 255, 255) solid 1px;
+            cursor: pointer;
+        }
+
+        .ad{
+            color: rgba(255, 255, 255, 0.486);
+        }
+
+        .my{
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .my>div{
+            cursor: pointer;
+        }
+
+        .my>div>a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .looking_shop{
+            display: flex;
+            justify-content: space-around;
+            height: 300px;
+
+            padding-left: 50px;
+        
+        }
+
+        .donation{
+            display: flex;
+            justify-content: space-evenly;
+            height: 300px;
+
+            padding-left: 100px;
+            margin-top: 100px;
+        }
+        
+    
+        .right{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right > div{
+            margin:10px;
+        }
+        
+        .right_button{
+            border:grey 1px solid;
+            text-align: center;
+            align-content: center;
+            height: 50px;
+        }
+
+        .right_button > a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .right_button:hover{
+            background-color: black;
+        }
+
+        .right_button:hover > a{
+            color: white;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="outline"><!-- 최외곽 -->
+
+        <div class="navigation"><!-- 네비게이션 -->
+            <div style="font-size: 35px; font-weight: bolder;">  
+                <a href="">LUSH</a></div>
+            <div>  <a href="./Lush소개.html">러쉬소개</a> </div>
+            <div> <a href="./spa.html">스파</a></div>
+            <div> <a href="./매장.html">매장 안내</a>   </div>
+        </div><!-- 네비게이션 -->
+
+        
+        <div class="quick"><!-- 퀵메뉴 -->
+            <div>
+                <a  href="https://pf.kakao.com/_VEbUM/chat?uuid=%40njm0mjywmsvfqiu" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt=""></a>
+            </div>
+            <div class="store">
+                <a href="">
+                <img src="./resources/images/index/shop.webp" alt=""></a>
+                <div class="qr-code">
+                    
+                    <img src="./resources/images/store.png" alt="">
+                </div>
+            </div>
+            <div>
+                <a href="">
+                <img src="https://cdn.icon-icons.com/icons2/3860/PNG/512/top_arrow_icon_238720.png" alt=""></a>
+            </div>
+        </div><!-- 퀵메뉴 -->
+
+
+        <div class="content"><!-- 페이지 컨텐츠 -->
+
+            <div class="banner"> <!-- 배너 -->
+                <div class="bn_text">
+                    지친 피부에 <br>
+                    충전이 필요한 지금!
+                </div>
+                <div class="bn_install"><!-- install -->
+                    <img  src="https://weare.lush.co.kr/images/btn_app_apple.png" >
+                    <div style="width: 20px;">   </div>
+                    <img src="https://weare.lush.co.kr/images/btn_app_google.png" >
+                </div><!-- install -->
+            </div><!-- 배너 -->
+
+            <div class="service"> <!-- 러쉬 서비스 -->
+                <div class="preview_text">
+                    <div style="font-size: 10px; text-align: center;">
+                        미리보는 러쉬
+                    </div>
+                    <div style="font-size:  18px; font-weight: bold;">
+                        러쉬에서 만나는 다채로운 서비스
+                    </div>
+                </div>
+                <div class="preview_item"> <!-- 이미지는 라운드처리 -->
+                    <div> <!--  디지털덕찌 -->
+                        <img src="https://weare.lush.co.kr/images/main_app_digital@3x.jpg" alt="">
+                        <div class="title">디지털덕찌</div> 
+                        <div class="item_text">러쉬 만의 맴버십 뱃지 프로그램 <br>
+                            덕찌력을 쌓아보세요! <br>
+                            특별한 선물이 준비되어 있어요.</div>
+                    </div>
+                    <div> <!-- 회원선물 -->
+                        <img src="https://weare.lush.co.kr/images/main_app_member@3x.jpg" alt="">
+                        <div class="title">회원선물</div> 
+                        <div class="item_text">공식 앱 회원에게만 제공하는 <br>
+                            365일 신선한 스마트 샘플과 <br>
+                            깜짝 선물 교환권을 발급해 드려요!</div>
+                    </div>
+                    <div>
+                        <img src="https://weare.lush.co.kr/images/main_app_gift@3x.jpg" alt="">
+                        <div class="title">선물하기</div> 
+                        <div class="item_text">주소와 연락처를 몰라도 <br>
+                            향기로운 선물을 메시지 카드와 함께 <br>
+                            쇼핑백에 담아 선물해 보세요!   </div>
+                    </div>
+
+                </div><!-- 프리뷰 아이템 -->
+            </div><!-- 서비스러쉬  -->
+
+            <div class="donation"><!-- 기부와 나눔 -->
+                <div class="left">
+                    <img width=" 450px"
+                    src="https://weare.lush.co.kr/images/main_share@3x.jpg" alt="">
+                </div>
+                <div class="right">
+                    <div  style="font-weight: bold; font-size: 15px;">
+                        기부와 나눔 </div>
+                    <div style="font-size: 20px; font-weight: bold"
+                    >우리의 글로벌 <br> 기부생태계는 <br> 적절하고 급진적이며 <br>광범위합니다.
+                    
+                    </div>
+                    <div class="right_button">
+                        <a href="./Lush소개.html">자세히보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="survey"> <!-- 설문조사 -->
+                    <img width="80%"
+                    src="./resources/images/index/survey.jpg">
+                <div class="survey_text">
+                    <div style="font-size: 25px;"
+                    >설문조사</div>
+                <div>여러분의 러쉬 경험을 알려주세요!</div>
+                <br>
+                <div class="survey_button">
+                    <a href="">바로 참여하기</a>
+                    </div>
+            </div>
+            </div><!--설문 -->
+
+            <div style="height:100px; background-color: transparent;">
+                
+            </div>
+
+            <div class="looking_shop"> <!--매장 찾기 -->
+                <div class="left">
+                    <img width=" 450px"
+                    src="https://weare.lush.co.kr/images/main_shop@3x.jpg" alt="">
+                </div>
+
+                <div class="right">
+                    <div  style="font-weight: bold; font-size: 15px;">
+                        매장 찾기 </div>
+                    <div style="font-size: 20px;"
+                    >가장 가까운 매장을 찾고 <br>
+                        향기로운 러쉬를 만나보세요
+                    </div>
+                    <div class="right_button">
+                        <a href="./매장.html">자세히보기</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="vlaue"> <!--러쉬가치 -->
+                <div class="value_box"><!--첫째줄 -->
+                    <div class="ROUND">
+                        <a >NAKED <BR></BR> PRODUCT</a>
+                    </div>
+                    <div class="ROUND">
+                        <a >FIGHTNG <BR></BR>ANIMAL TESTING</a>
+                    </div>
+                    <div class="ROUND">
+                        <a >FRESH <BR></BR>COSMETICS</a>
+                    </div>
+                </div><!--둘째줄 -->
+                <div class="value_box">
+                    <div  class="ROUND">
+                        <a >100% <BR></BR> VEGETARIAN</a>
+                    </div>
+                    <div class="ROUND">
+                        <a >ETHICAL <BR></BR>BUYING</a>
+                    </div>
+                    <div class="ROUND">
+                        <a >HANDMADE <BR></BR>WITH LOVE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer"><!--footer-->
+                <div>러쉬 앱 다운받기 <br><br>
+                    <a href="https://apps.apple.com/kr/app/%EB%9F%AC%EC%89%AC/id6450295213" target="_blank">
+                        <img src="./resources/images/스크린샷 2024-06-07 113659.png" alt="">
+                    </a>
+        
+                    <br>
+        
+                    <a href="https://play.google.com/store/apps/details?id=kr.co.lush.lushapp&pli=1" target="_blank">
+                        <img src="./resources/images/구글.png" alt="">
+                    </a>
+                    <a href="./resources/images/구글.png"></a>
+                </div>
+        
+                <div><!--고객센터-->
+                    <h2>고객센터</h2>
+                    <a class="call">1644-2357</a>
+                    <br>
+                    <div>상담전화 13:00 ~ 16:00(평일)
+                        <br>webmaster@lush.co.kr
+                    </div>
+                    <br>
+                    <div>
+                        상담톡 10:00 ~16:00(평일) <br>
+                        상담톡시작하기 
+                    </div>
+                </div>
+                <div><!--고객센터-->
+                    <h2>기업선물</h2>
+                        <a class="call">070-4713-8543</a>
+                        <div>order@lush.co.kr</div>
+                </div>
+                <div><!--주소-->
+                    <div class="ad">서울 강남구 학동로 336 (메이트리 빌딩(matree B/D)) 1층 주식회사 러쉬코리아
+                        <br>사이트 운영자 : 주식회사 러쉬코리아 I 대표이사 : 우미령
+                        <br>사업자 등록번호 : 201-81-77964 사업자정보확인
+                        <br>통신판매업 신고번호 : 2012-서울서초-0647 I 개인정보보호책임자 : 장승웅
+                        <br>
+                        <br>COPYRIGHT © LUSHKOREA.CO.LTD.ALL RIGHTS RESERVED.
+                        <br>
+                        <br>
+                        <a href="https://www.youtube.com/user/LUSHKOREA1?app=desktop" target="_blank">
+                            <img src="./resources/images/asdf.png" alt="">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="my"><!--개인정보-->
+                    <div><a href="https://weare.lush.co.kr/policy_L2401.html" style="color: yellow;" target="_blank">개인정보처리방침</a></div>
+                    <div><a href="https://weare.lush.co.kr/policy_video_v2.html" target="_blank">영상정보관리지침</a></div>
+                    <div><a href="https://weare.lush.co.kr/useinfo_v5.html" target="_blank">이용약관</a></div>
+                </div>
+
+        </div><!-- 페이지 컨텐츠 -->
+    </div><!-- 최외곽 -->
+
+</body>
+</html>

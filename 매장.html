@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매장안내</title>
+<style>
+
+    *{
+        border: 0px  solid  grey;
+    }
+        
+    div{
+        font-size: 20px; 
+    }
+
+    .first{
+        width: 100%;
+        height: 100%;
+        }
+
+        .navigation{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+            position: fixed;
+            top: 0px;
+            background-color: white;
+            
+            z-index: 100;
+            
+        }
+
+
+        .navigation > div{
+
+            align-content: center;
+
+            font-size: 15px;
+        }
+
+        .navigation > div >a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+    .logo{
+        font-size: 100px;
+    }
+
+    .quick{
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 10px;
+            top: 300px;
+
+            background-color: transparent;
+
+            height: 210px;
+            width: 70px;
+
+            z-index: 99;
+        }
+
+        .quick > div{
+            width: 70px;
+            height: 70px; 
+        }
+
+        .quick > div > a > img{
+            width: 60px;
+            height: 60px;
+
+            border-radius: 70px;
+        }
+
+    .banner{
+            font-size: 50px;
+            background: transparent;
+            color: azure;
+            padding-top: 20px;
+
+            position: relative;
+
+
+        }
+
+        .banner-logo{
+            width: 200px;
+        }
+        .banner-bg{
+            width: 100%;
+        }
+
+        .banner >a{
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .bn_text{
+            font-size: 35px;
+            color: white;
+            font-weight: bolder;
+
+            position: absolute;
+            left: 13%;
+            bottom: 7%;
+        }
+        
+        .content{
+            display: flex;
+            justify-content: space-around;
+            height: 500px;
+            padding: 20px;
+        }
+        .right{
+
+            height: 100%;
+        }
+
+
+        .footer{
+            background-color: black;
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 70px;
+            padding-right: 70px;
+
+            display: flex;
+            justify-content: space-around;
+
+            color: rgb(255, 255, 255);
+            font-size: small;
+        }
+
+        .call:hover{
+            border-bottom: rgb(255, 255, 255) solid 1px;
+            cursor: pointer;
+        }
+
+        .ad{
+            color: rgba(255, 255, 255, 0.486);
+        }
+
+        .my{
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .my>div{
+            cursor: pointer;
+        }
+
+        .my>div>a{
+            text-decoration: none;
+            color: white;
+        }
+
+        
+
+        .map_title{
+            font-size: 25px;
+            font-weight: bold;
+
+            width: 250px;
+            
+            text-align: center;
+
+            margin: 20px;
+
+            border-radius: 10px;
+            
+            background-color: black;
+            color: white;
+
+        }
+
+        .map_text{
+            font-size:0px;
+            height: 0;
+        }
+
+        .map_title:hover .map_text{
+            font-size: 15px;
+            height: 50px;
+            color: gray;
+        }
+
+</style>
+
+
+</head>
+<body>
+    
+        <div class="first"> <!-- /최외곽/ -->
+            <div class="navigation"><!-- 네비게이션 -->
+                <div style="font-size: 35px; font-weight: bolder;">  
+                    <a href="./index.html">LUSH</a></div>
+                <div>  <a href="./Lush소개.html">러쉬소개</a> </div>
+                <div> <a href="./spa.html">스파</a></div>
+                <div> <a href="./매장.html">매장 안내</a>   </div>
+            </div><!-- 네비게이션 -->
+
+            <div class="quick"><!-- 퀵메뉴 -->
+                <div>
+                    <a  href="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt=""></a>
+                </div>
+                <div>
+                    <a href="">
+                    <img src="./resources/images/index/shop.webp" alt=""></a>
+                </div>
+                <div>
+                    <a href="">
+                    <img src="https://cdn.icon-icons.com/icons2/3860/PNG/512/top_arrow_icon_238720.png" alt=""></a>
+                </div>
+            </div><!-- 퀵메뉴 -->
+
+                <div class="banner"> <!-- 배너 -->
+                    <div>
+                        <img class="banner-bg" src="https://www.jangup.com/news/photo/202306/90603_62111_3141.jpg">
+                    </div>
+                    <div class="bn_text">
+                    가장 가까운 매장을 찾아 <br>
+                    향기로운 러쉬를 만나보세요!
+                    </div>
+                </div><!-- 배너 -->
+                
+                </div>
+
+                <div class="content">
+                    <div class="left">
+                        <img width="500x" src="https://weare.lush.co.kr/images/shop_applepay@3x.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="map_title"> 서울
+                            <div class="map_text">러쉬 강남역점 <br>
+                                서울특별시 서초구 강남대로 433</div>
+                        </div>
+
+                        <div class="map_title">경기
+                            <div class="map_text">
+                                러쉬 신세계백화점 경기점 <br>
+                                경기도 용인시 수지구 포은대로 536 
+                            </div>
+                        </div>
+
+                        <div class="map_title">충청
+                            <div class="map_text"> 러쉬 갤러리아 타임월드점 <br>
+                                대전광역시 서구 대덕대로 211 </div>
+                        </div>
+
+                        <div class="map_title">전라
+                            <div class="map_text">러쉬 롯데백화점 광주점 <br>
+                                광주광역시 동구 독립로 268  </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="footer"><!--footer-->
+                    <div>러쉬 앱 다운받기 <br><br>
+                        <a href="https://apps.apple.com/kr/app/%EB%9F%AC%EC%89%AC/id6450295213" target="_blank">
+                            <img src="./resources/images/스크린샷 2024-06-07 113659.png" alt="">
+                        </a>
+            
+                        <br>
+            
+                        <a href="https://play.google.com/store/apps/details?id=kr.co.lush.lushapp&pli=1" target="_blank">
+                            <img src="./resources/images/구글.png" alt="">
+                        </a>
+                        <a href="./resources/images/구글.png"></a>
+                    </div>
+            
+                    <div><!--고객센터-->
+                        <h2>고객센터</h2>
+                        <a class="call">1644-2357</a>
+                        <br>
+                        <div>상담전화 13:00 ~ 16:00(평일)
+                            <br>webmaster@lush.co.kr
+                        </div>
+                        <br>
+                        <div>
+                            상담톡 10:00 ~16:00(평일) <br>
+                            상담톡시작하기 
+                        </div>
+                    </div>
+                    <div><!--고객센터-->
+                        <h2>기업선물</h2>
+                            <a class="call">070-4713-8543</a>
+                            <div>order@lush.co.kr</div>
+                    </div>
+                    <div><!--주소-->
+                        <div class="ad">서울 강남구 학동로 336 (메이트리 빌딩(matree B/D)) 1층 주식회사 러쉬코리아
+                            <br>사이트 운영자 : 주식회사 러쉬코리아 I 대표이사 : 우미령
+                            <br>사업자 등록번호 : 201-81-77964 사업자정보확인
+                            <br>통신판매업 신고번호 : 2012-서울서초-0647 I 개인정보보호책임자 : 장승웅
+                            <br>
+                            <br>COPYRIGHT © LUSHKOREA.CO.LTD.ALL RIGHTS RESERVED.
+                            <br>
+                            <br>
+                            <a href="https://www.youtube.com/user/LUSHKOREA1?app=desktop" target="_blank">
+                                <img src="./resources/images/asdf.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class="my"><!--개인정보-->
+                        <div><a href="https://weare.lush.co.kr/policy_L2401.html" style="color: yellow;" target="_blank">개인정보처리방침</a></div>
+                        <div><a href="https://weare.lush.co.kr/policy_video_v2.html" target="_blank">영상정보관리지침</a></div>
+                        <div><a href="https://weare.lush.co.kr/useinfo_v5.html" target="_blank">이용약관</a></div>
+                    </div>
+    
+        </div>
+    
+</body>
+</html>
